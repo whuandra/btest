@@ -1,0 +1,33 @@
+locals {
+  appianire_uploads_contact     = "small"
+  appianire_uploads_lob         = "This"
+  appianire_uploads_cost_center = "001"
+  appianire_uploads_kms_key     = "alias/frb-app-uploads-s3"
+
+  app_uploads_bucket_policies = <<-EOF
+  {
+    "Effect": "Allow",
+    "Action": [
+                "s3:ListBucket",
+                "s3:GetBucketLocation"
+              ],
+    "Principal": {"AWS": ["${var.acct == "dev" ? aws_iam_user.app_uploads["1"].arn : ""}"]},
+    "Resource": [
+      "arn:aws:s3:::${local.account_bucket_prefixes[var.acct]}-app-uploads",
+      "arn:aws:s3:::${local.account_bucket_prefixes[var.acct]}-app-uploads/*"
+    ]
+  },
+  {
+     "Effect": "Allow",
+     "Action": [
+                "s3:PutObject",
+                "s3:PutObjectAcl",
+                "s3:Get*",
+                "s3:DeleteObject"
+               ],
+     "Principal": {"AWS": ["${var.acct == "dev" ? aws_iam_user.app_uploads["1"].arn : ""}"]}, 
+     "Resource": [
+      "arn:aws:s3:::${local.account_bucket_prefixes[var.acct]}-app-uploads/*"
+    ]
+  }
+  EOF
