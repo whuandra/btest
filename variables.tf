@@ -1,3 +1,3 @@
-variable "count" {
+variable "acct" {
   description = "test count"
   }
