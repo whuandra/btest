@@ -1,1 +1,3 @@
-variable "count" {}
+variable "count" {
+  description = "test count"
+  }
