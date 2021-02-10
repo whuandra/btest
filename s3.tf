@@ -20,10 +20,11 @@ bucket = "wino-test-s3-2921-tues"
 "Resource": "arn:aws:s3:::wino-test-s3-2921-tues/*",
 "Principal": {
 "AWS": "arn:aws:iam::590661738553:user/scott"
-}
+  }
 }
 ]
 }
+POLICY
 }
 
 
