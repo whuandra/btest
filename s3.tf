@@ -10,14 +10,10 @@ resource "aws_s3_bucket_policy" "wino_test_s3_pol" {
 "Id": "MYBUCKETPOLICY",
 "Statement": [
 {
-"sid": "IPAllow",
+"sid": "",
 "Effect": "Allow",
 "Action": [
-"s3:ListBucket",
-"s3:GetBucketLocation",
 "s3:PutObject",
-"s3:PutObjectAcl",
-"s3:Get*",
 "s3:DeleteObject"
 ],
 "Resource": "arn:aws:s3:::wino-test-s3-2921-tues/*",
