@@ -7,7 +7,7 @@ bucket = "wino-test-s3-2921-tues"
 "Id": "MYBUCKETPOLICY",
 "Statement": [
 {
-"sid": "IPAllow",
+"sid": "",
 "Effect": "Allow",
 "Action": [
 "s3:ListBucket",
