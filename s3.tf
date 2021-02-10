@@ -1,3 +1,3 @@
 resource "aws_s3_bucket" "wino_test_s3_2921" {
-bucket = "my-tf-test-bucket"
+bucket = "wino-test-s3-2921-tues"
 }
