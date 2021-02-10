@@ -10,7 +10,7 @@ resource "aws_s3_bucket_policy" "wino_test_s3_pol" {
 "Id": "MYBUCKETPOLICY",
 "Statement": [
 {
-"sid": "",
+"sid": "AddPerm",
 "Effect": "Allow",
 "Action": [
 "s3:ListBucket",
