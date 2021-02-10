@@ -4,7 +4,6 @@ bucket = "wino-test-s3-2921-tues"
 
 resource "aws_s3_bucket_policy" "wino_test_s3_pol" {
   bucket = aws_s3_bucket.wino_test_s3_2921.id
-  policy_format = "s3"
   policy = <<POLICY
 {
 "Version": "2008-10-17",
