@@ -6,8 +6,6 @@ resource "aws_s3_bucket_policy" "wino_test_s3_pol" {
   bucket = aws_s3_bucket.wino_test_s3_2921.id
   policy = <<POLICY
 {
-// "Version": "2012-10-17",
-// "Id": "MYBUCKETPOLICY",
 "Statement": [
 {
 "sid": "AddPerm",
